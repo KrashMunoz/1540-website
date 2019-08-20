@@ -17,19 +17,35 @@
             width: 375px;
         }
         
+/*
         .shadow-sm {
             box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
         }
+*/
         
-        .shadow-md {
+        .shadow-md-new {
             box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
         }
         
+        .gradient-background {
+            background: linear-gradient(135deg, rgb(198, 159, 177) 0%, rgb(78, 87, 190) 100%);
+        }
+        
+        #embedded-playlist {
+            border: none;
+/*            margin: 2em 0 0 0;*/
+        }
+        
+        @media (min-width: 768px) {
+            #embedded-playlist {
+            }
+        }
+
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-md">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-md-new">
         <div class="container">
             <a class="navbar-brand abs" href="#">
 <!--                1540 Productions-->
@@ -62,13 +78,20 @@
 
     
     <div class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Modest Living:<br> Out Now!</h1>
-            <img id="modest-living-cover" src="modest-living.jpg" class="img-fluid rounded shadow-sm">
-            <p class="lead text-muted">Click below to listen to the project.</p>
-            <a href="https://soundcloud.com/getjiggywith1540/sets/modest-living" class="btn btn-primary" target="_blank">Listen Now</a>
+        <div class="container well">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="jumbotron-heading">Modest Living:<br> Out Now!</h1>
+                    <img id="modest-living-cover" src="modest-living.jpg" class="img-fluid img-thumbnail rounded gradient-background shadow-sm">
+                    <p class="lead text-muted">Click below to listen to the project.</p>
+                    <a href="https://soundcloud.com/getjiggywith1540/sets/modest-living" class="btn btn-primary" target="_blank">Listen Now</a>
+                </div>
+                <div class="col-md-6">
+                    <iframe id="embedded-playlist" class="shadow-sm m-4" height="540px" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/766618755&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false"></iframe>
+                </div>
+            </div>
         </div>
-    </div>
+    </div>    
 
 
 
